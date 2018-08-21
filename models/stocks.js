@@ -7,8 +7,4 @@ let stockSchema = new Schema({
   ips: {type: [String], required: true, default: []}
 })
 
-if (process.env.NODE_ENV === 'test') {
-  module.exports = mongoose.model('test_stocks', stockSchema)
-} else {
-  module.exports = mongoose.model('stocks', stockSchema)
-}
+module.exports = mongoose.model('stocks', stockSchema)

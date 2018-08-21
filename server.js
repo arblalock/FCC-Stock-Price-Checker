@@ -21,13 +21,13 @@ app.use(cors({origin: '*'})) // For FCC testing purposes only
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
-// app.use(csp({
-//   directives: {
-//     defaultSrc: ["'self'"],
-//     scriptSrc: ["'self'"],
-//     styleSrc: ["'self'"]
-//   }
-// }))
+app.use(csp({
+  directives: {
+    defaultSrc: ["'self'"],
+    scriptSrc: ["'self'"],
+    styleSrc: ["'self'"]
+  }
+}))
 
 mongoose.connect(process.env.DB, (err, db) => {
   if (err) return console.error(err)
