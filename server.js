@@ -24,8 +24,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(csp({
   directives: {
     defaultSrc: ["'self'"],
-    scriptSrc: ["'self'"],
-    styleSrc: ["'self'"]
+    scriptSrc: ["'self'", "'unsafe-inline'"],
+    styleSrc: ["'self'", "'unsafe-inline'"]
   }
 }))
 
