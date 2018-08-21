@@ -1,3 +1,3 @@
 # FCC-Stock-Price-Checker
 
-#example: https://arblalock-fcc-stock-price-checker.glitch.me/
+example: https://arblalock-fcc-stock-price-checker.glitch.me/
