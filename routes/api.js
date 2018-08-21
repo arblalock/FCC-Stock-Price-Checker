@@ -23,11 +23,10 @@ module.exports = function (app, db) {
               res.send('Invalid Stock Name')
               return Promise.reject(new Error('Invalid Stock Name'))
             } else {
-              console.log(response['data']['Time Series (Daily)'][cDate])
               price1 = response['data']['Time Series (Daily)'][cDate]['4. close']
               return new Promise((resolve, reject) => {
                 // Don't hit the api too quick
-                setTimeout(() => resolve(), 1000)
+                setTimeout(() => resolve(), 3000)
               })
             }
           })
@@ -37,7 +36,6 @@ module.exports = function (app, db) {
               res.send('Invalid Stock Name')
               return Promise.reject(new Error('Invalid Stock Name'))
             } else {
-              console.log(response['data']['Time Series (Daily)'][cDate])
               price2 = response['data']['Time Series (Daily)'][cDate]['4. close']
             }
           })
