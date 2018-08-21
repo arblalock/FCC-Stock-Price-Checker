@@ -61,6 +61,7 @@
     <script>
       $(function() {
         $('#testForm').submit(function(e) {
+          $('#jsonResult').text('loading...');
           $.ajax({
             url: '/api/stock-prices',
             type: 'get',
@@ -72,6 +73,7 @@
           e.preventDefault();
         });
         $('#testForm2').submit(function(e) {
+          $('#jsonResult').text('loading...');
           $.ajax({
             url: '/api/stock-prices',
             type: 'get',
